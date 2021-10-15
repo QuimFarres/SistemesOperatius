@@ -10,6 +10,8 @@ typedef struct {
     point a;
     point b;
 } recta;
+
+// Heu de fer servir la estructura recta a la funció dist enlloc dels punts
  
 float dist( point A, point B) {
 return(sqrt((A.x - B.x)*(A.x - B.x) + (A.y - B.y)*(A.y - B.y)));
