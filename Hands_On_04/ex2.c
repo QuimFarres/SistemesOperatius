@@ -13,6 +13,5 @@ int main () {
         {
             printf("Hola sóc el procés pare amb pid %d \n", getpid());
         }
-
-        
+       
 }
