@@ -10,9 +10,11 @@ typedef struct {
     point a;
     point b;
 } recta;
+
+// Heu de fer servir la estructura recta a la funció dist enlloc dels punts
  
-float dist( point A, point B) {
-return(sqrt((A.x - B.x)*(A.x - B.x) + (A.y - B.y)*(A.y - B.y)));
+float dist( recta R) {
+return(sqrt((R.a.x - R.b.x)*(R.a.x - R.b.x) + (R.a.y - R.b.y)*(R.a.y - R.b.y)));
 }
  
 int main(){
@@ -20,14 +22,14 @@ int main(){
  
 float d;
 point A, B;
- 
+recta R;
 
 printf("The coordinates of the point A are: ");
-scanf("%f %f",&A.x,&A.y);
+scanf("%f %f",&R.a.x,&R.a.y);
  
 
 printf("\nThe coordinates of the point B are: ");
-scanf("%f %f",&B.x,&B.y);
+scanf("%f %f",&R.b.x,&R.b.y);
  
 
 printf("\nThe distance between A and B is %f\n", dist(A,B));
