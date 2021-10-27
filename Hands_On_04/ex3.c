@@ -11,7 +11,7 @@ int pid = fork();
 if ( pid == 0 ) {
 
 //execvp( "find", argv );
-execvp("/usr/bin" , argv);
+execvp("/usr/bin/find" , argv);
 
 }
 
