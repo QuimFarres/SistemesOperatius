@@ -1,0 +1,5 @@
+El perill de aquesta funcio, es que com a user, pots accesdir a cualsevol part del kernel
+amb funcions com open, per exemple:
+    mystemcall sigui open();
+    el char* msg sigui una posicio on hi haguin valors que nomes puguin ser accedides per el kernel
+    hi i pots accedir com a user, o accedir a valors de un altre usr que no siguis tu.
