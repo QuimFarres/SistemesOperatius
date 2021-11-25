@@ -1,0 +1,22 @@
+Pregunta 1:
+En el cas que es crida el fork abans de fer el open, en el fitxer de sortida només s'escriu so 1 cop
+en cambi en si es crida després s'escriuen 2 so.
+Això passa a causa de que al obrir el fitcher dos cops es borra el que s'ha escrit el primer cop o es sobreescriu
+i si ja el tens obert es segueix escrivint, ja que s'edere el fitcher
+
+Pregunta 2:
+Totes les dades que viatgen per la canonada es mouen pel nucli.
+Comparteixen totes les adreces que estan abans del fork.
+
+Pregunta 3:
+Quan tenim la seguent linea comentada, ens surten els seguents missatges per pantalla:
+    I got a message! It was msg1
+    I got a message! It was msg2
+i a partir de aqui es queda el programa esperant
+Quan la descomentem el resultat es semblant pero tenim una resposta més i el programa acaba, la resposta és:
+    I got a message! It was msg1
+    I got a message! It was msg2
+    No more messages :(
+Això passa com a consecuencia de no tancar la part de escriptura del pipe en el fill, ja que sino el bucle del pare
+que és while(read(fd[0],&buf,sizeof(buf))), si no esta tancat (per part del fill) es quedara pillat en aquest bucle.
+
