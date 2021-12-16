@@ -38,6 +38,7 @@ int main(int argc, char *argv[]){
                 execvp(p2[0], p2);
 
              }else{ //pare
+                close(fd[1]);
                 waitpid(pid1, 0 ,0);
                 waitpid(pid,0 ,0);
              }
